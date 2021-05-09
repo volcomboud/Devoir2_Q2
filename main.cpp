@@ -29,7 +29,7 @@ int main() {
 
 	for (int i = 0; i < TAILLE_TAB2; i++) std::cout << tab2[i] << " ";
 	std::cout << std::endl;
-	if(ptr)std::cout << "Max tab2 est " << *ptr << std::endl;
+	if(ptr)std::cout << "Max tab2 est " << *ptr << std::endl; //Ajout d'une protection pour éviter de "Print" un élément NULL
 	else
 		std::cout << "Aucun maximum possible car le tab2 est vide " << std::endl; //Message indiquant que l'élément est NULL
 
