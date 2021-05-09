@@ -4,7 +4,7 @@ int* determinerMax(int* tableau, int taille);
 
 int main() {
 	const int TAILLE_TAB1 = 3;
-	const int TAILLE_TAB2 = 10;
+	const int TAILLE_TAB2 = 0;
 
 	int* tab1 = new int[TAILLE_TAB1];
 	int* tab2 = new int[TAILLE_TAB2];
@@ -23,13 +23,15 @@ int main() {
 	if (ptr) std::cout << "Max tab1 est " << *ptr << std::endl; //Ajout d'une protection pour éviter de "Print" un élément NULL
 
 	else
-		std::cout << "Aucun maximum possible car le tableau est vide " << std::endl; //Message indiquant que l'élément est NULL
+		std::cout << "Aucun maximum possible car le tab1 est vide " << std::endl; //Message indiquant que l'élément est NULL
 
 	ptr = determinerMax(tab2, TAILLE_TAB2);
 
 	for (int i = 0; i < TAILLE_TAB2; i++) std::cout << tab2[i] << " ";
 	std::cout << std::endl;
-	std::cout << "Max tab2 est " << *ptr << std::endl;
+	if(ptr)std::cout << "Max tab2 est " << *ptr << std::endl;
+	else
+		std::cout << "Aucun maximum possible car le tab2 est vide " << std::endl; //Message indiquant que l'élément est NULL
 
 	delete[] tab1;
 	delete[] tab2;
